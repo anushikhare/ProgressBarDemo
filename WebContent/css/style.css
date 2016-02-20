@@ -1,0 +1,7 @@
+@CHARSET "ISO-8859-1";
+h1{
+	text-align:center;
+}
+.control-section, .progress-region {
+	margin:20px 0px;
+}
