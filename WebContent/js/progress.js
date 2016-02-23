@@ -2,7 +2,7 @@
  * 
  * @author Anuradha Shikhare
  * 
- * Handles the behaviour and intercation of the progress bars
+ * Handles the behaviour and interaction of the progress bars
  * 
  */
 
