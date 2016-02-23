@@ -17,7 +17,7 @@ Progress.prototype = {
 	selectProgressBarToUpdate : function(progressChangeValue) {
 		switch(this._selectValue){
 		case '#progress1':
-			this._updateProgressBar('progress1', 'value1', progressChangeValue);
+			this._updateProgressBar('progress1', 'value1', progressChangeValue); 
 			break;
 		case '#progress2':
 			this._updateProgressBar('progress2', 'value2', progressChangeValue);
