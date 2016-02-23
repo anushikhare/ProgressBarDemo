@@ -7,7 +7,7 @@
  */
 
 function Progress(selectValue) {
-	this._selectValue = selectValue; 
+	this._selectValue = selectValue;
 }
 
 Progress.prototype = {
