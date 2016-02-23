@@ -10,58 +10,65 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/progress.js"></script>
+    <script src="./js/start.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8">
+            <div class="col-sm-12 col-xs-12 col-md-8 col-lg-12">
                 <h1>Progress Bar Demo</h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8">
-                <div class="progress">
-                    <div class="progress-bar" id="progress1" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                        <span>70%</span>
+        <div class="progress-region">
+            <div class="row">
+                <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                    <div class="progress">
+                        <div class="progress-bar" id="progress1" role="progressbar" aria-valuenow="0" aria-valuemin="25" aria-valuemax="100" style="width:25%">
+                            <input id="value1" type="hidden" value="25" />
+                            <span>25%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                    <div class="progress">
+                        <div class="progress-bar" id="progress2" role="progressbar" aria-valuenow="0" aria-valuemin="50" aria-valuemax="100" style="width:50%">
+                            <input id="value2" type="hidden" value="50" />
+                            <span>50%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                    <div class="progress">
+                        <div class="progress-bar" id="progress3" role="progressbar" aria-valuenow="0" aria-valuemin="75" aria-valuemax="100" style="width:75%">
+                            <input id="value3" type="hidden" value="75" />
+                            <span>75%</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row control-section">
             <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8">
-                <div class="progress">
-                    <div class="progress-bar" id="progress2" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                        <span>70%</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8">
-                <div class="progress">
-                    <div class="progress-bar" id="progress3" role="progressbar" aria-valuenow="" aria-valuemin="0" style="width:70%" aria-valuemax="100">
-                        <span>70%</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
-            	<label for="selectProgressBar">Select the progress bar to change behavior:</label>
-           		<select id="selectProgressBar">
-           			<option id="progressOne" value="">#progress1</option>
-           			<option id="progressTwo" value="">#progress2</option>
-           			<option id="progressThree" value="">#progress3</option>
+                <label for="selectProgressBar">Select the progress bar to change behavior:</label>
+                <select id="selectProgressBar">
+           			<option value="#progress1">#progress1</option>
+           			<option value="#progress2">#progress2</option>
+           			<option value="#progress3">#progress3</option>
            		</select>
-           	</div>
-           	<div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
-           		<button value="-10">-10</button>
-           		<button value="-25">-25</button>
-           		<button value="+10">+10</button>
-           		<button value="+25">+25</button>	
-           	</div>
-    	</div>
+            </div>
+            <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+                <button value="-10">-10</button>
+                <button value="-25">-25</button>
+                <button value="+10">+10</button>
+                <button value="+25">+25</button>
+            </div>
+        </div>
     </div>
 </body>
 
