@@ -14,7 +14,7 @@ Progress.prototype = {
 	setSelectValue : function(selectValue) {
 		this._selectValue = selectValue;
 	},
-	selectProgressBarToUpdate : function(progressChangeValue) {
+	checkProgressBarToUpdate : function(progressChangeValue) {
 		switch(this._selectValue){
 		case '#progress1':
 			this._updateProgressBar('progress1', 'value1', progressChangeValue); 
@@ -22,7 +22,7 @@ Progress.prototype = {
 		case '#progress2':
 			this._updateProgressBar('progress2', 'value2', progressChangeValue);
 			break;
-		case '#progress1':
+		case '#progress3':
 			this._updateProgressBar('progress3', 'value3', progressChangeValue);
 			break;
 		default:
@@ -31,8 +31,22 @@ Progress.prototype = {
 	_updateProgressBar : function(progressBarId, hiddenId, progressChangeValue) {
 		currentValue = $('#'+hiddenId).val();
 		newValue = parseInt(currentValue) + parseInt(progressChangeValue);
-		$('#'+progressBarId).css("width" , newValue+"%");
+		progressBarIdInjQuery = '#'+progressBarId;
+		if(newValue > 0 && newValue <= 100){
+			$(progressBarIdInjQuery).css("width" , newValue+"%");
+			$(progressBarIdInjQuery).css("background-color" , "#CCCCCC");
+		}
+			
+		else if(newValue > 100){
+			$(progressBarIdInjQuery).css("width" , "100%");
+			$(progressBarIdInjQuery).css("background-color" , "#FF0000");
+		}
+		else{
+			$(progressBarIdInjQuery).css("width" , "0%");
+			newValue=0;
+		}
 		$('#'+hiddenId).val(newValue);
-		$('#'+progressBarId).attr("aria-valuenow",newValue);
+		$(progressBarIdInjQuery).attr("aria-valuenow",newValue);
+		$(progressBarIdInjQuery + " span").text(newValue+"%");
 	}
 }
